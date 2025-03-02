@@ -1,27 +1,20 @@
-import { Layout, Typography } from "antd";
+import { Layout } from "antd";
 import { Link } from "react-router-dom";
 
 const { Header } = Layout;
-const { Title } = Typography;
 
 const AppHeader = () => {
   return (
-    <Header className="bg-blue-600 text-white shadow-md">
+    <Header className="text-white shadow-md">
       <div className="container mx-auto flex justify-between items-center">
-        <Title level={3} className="text-white">
-          Main Form
-        </Title>
+        <h1 className="text-white font-bold text-3xl">Health Care</h1>
         <nav>
           <ul className="flex space-x-4">
             <li>
-              <Link to="/declare-health" className="hover:underline">
-                Declare Health
-              </Link>
+              <Link to="/declare-health">Declare Health</Link>
             </li>
             <li>
-              <Link to="/form" className="hover:underline">
-                Form
-              </Link>
+              <Link to="/health-declaration-list">Health Declaration List</Link>
             </li>
           </ul>
         </nav>
