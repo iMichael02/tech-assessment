@@ -1,0 +1,6 @@
+#root {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  background-color: oklch(0.828 0.189 84.429);
+}
