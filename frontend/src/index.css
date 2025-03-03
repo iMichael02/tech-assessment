@@ -33,6 +33,6 @@ a {
 }
 
 .form-top {
-  background-image: url('../public/form-top.jpg');
+  background-image: url('/form-top.jpg');
   background-size: cover;
 }

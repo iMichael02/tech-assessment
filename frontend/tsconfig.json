@@ -3,5 +3,21 @@
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
-  ]
+  ],
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "rootDir": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "strict": true,
+    "jsx": "react-jsx",
+    "forceConsistentCasingInFileNames": true,
+    "allowImportingTsExtensions": true,
+    "emitDeclarationOnly": false,
+    "composite": true,
+    "noEmit": true,
+    "types": ["jest", "@testing-library/jest-dom", "node"]
+  }
 }

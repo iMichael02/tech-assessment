@@ -1,5 +1,5 @@
-import { Input } from "antd";
-import { Control, Controller, FieldValues } from "react-hook-form";
+import { Input } from 'antd';
+import { Control, Controller, FieldValues } from 'react-hook-form';
 
 type FormFieldProps = {
   control: Control<FieldValues, any>;
@@ -15,22 +15,25 @@ const FormField: React.FC<FormFieldProps> = ({
   label,
   name,
   type,
-  placeholder,
+  placeholder = '',
   required,
 }) => {
   return (
-    <div className="mb-4">
-      <label className="block text-gray-700 text-left font-bold">{label}</label>
+    <div className='mb-4'>
+      <label htmlFor={name} className='block text-gray-700 text-left font-bold'>
+        {label}
+      </label>
       <Controller
         name={name}
         control={control}
-        defaultValue=""
+        defaultValue=''
         render={({ field }) => (
           <Input
+            id={name}
             type={type}
             required={required}
             placeholder={placeholder}
-            className={type === "number" ? "small-input" : ""}
+            className={type === 'number' ? 'small-input' : ''}
             {...field}
           />
         )}

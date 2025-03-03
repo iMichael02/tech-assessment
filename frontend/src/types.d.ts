@@ -1,4 +1,5 @@
 type DeclarationRecord = {
+  id: string;
   name: string;
   temperature: number;
   symptoms: string[];
