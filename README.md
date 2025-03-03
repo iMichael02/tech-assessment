@@ -5,7 +5,7 @@
 - Clone the repository:
 
 ```sh
-git clone https://github.com/your-repo/tech-assessment.git
+git clone https://github.com/iMichael02/tech-assessment.git
 cd tech-assessment
 ```
 
