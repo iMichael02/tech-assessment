@@ -2,7 +2,7 @@ import '@testing-library/jest-dom';
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { useForm } from 'react-hook-form';
-import FormField from '../FormField';
+import FormField from '../components/FormField';
 
 type WrapperProps = {
   label: string;

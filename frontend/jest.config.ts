@@ -5,7 +5,12 @@ import { Config } from 'jest';
 const config: Config = {
   clearMocks: true,
   collectCoverage: true,
-  collectCoverageFrom: ['src/**/*.{ts,tsx}', '!**/*.d.ts'],
+  collectCoverageFrom: [
+    'src/**/*.{ts,tsx}',
+    '!**/*.d.ts',
+    '!src/main.tsx',
+    '!src/App.tsx',
+  ],
   coverageDirectory: 'coverage',
   testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$',
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],

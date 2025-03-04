@@ -1,10 +1,10 @@
 import './App.css';
 import { ErrorBoundary } from 'react-error-boundary';
-import ErrorFallback from './common/ErrorFallback';
+import ErrorFallback from './common/components/ErrorFallback';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import HealthDeclarePage from './features/declare-health/pages/HealthDeclarePage';
-import AppHeader from './common/AppHeader';
-import ManageHealthDeclarationPage from './features/manage-health-declaration/pages/ManageHealthDeclarationPage';
+import HealthDeclarePage from './pages/HealthDeclarePage';
+import AppHeader from './common/components/AppHeader';
+import ManageHealthDeclarationPage from './pages/ManageHealthDeclarationPage';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 function App() {

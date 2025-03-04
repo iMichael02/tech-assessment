@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
-import ErrorFallback from '../ErrorFallback';
+import ErrorFallback from '../components/ErrorFallback';
 
 describe('ErrorFallback', () => {
   it('renders the error message', () => {

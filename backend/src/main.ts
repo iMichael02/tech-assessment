@@ -1,23 +1,25 @@
-import express from "express";
-import dotenv from "dotenv";
-import apiRoutes from "./routes";
-import { errorHandler } from "./middlewares/errorHandler";
+import express from 'express';
+import dotenv from 'dotenv';
+import apiRoutes from './routes';
+import { errorHandler } from './middlewares/errorHandler';
+import cors from 'cors';
 
 dotenv.config();
 
-const host = process.env.HOST || "localhost";
+const host = process.env.HOST || 'localhost';
 const port = process.env.PORT || 3000;
 
 const app = express();
 
+app.use(cors());
 app.use(express.json());
-app.use(express.urlencoded({ extended: true, type: "application/json" }));
+app.use(express.urlencoded({ extended: true, type: 'application/json' }));
 
-app.get("/health", (req, res) => {
-  res.status(200).send("OK");
+app.get('/health', (req, res) => {
+  res.status(200).send('OK');
 });
 
-app.use("/api", apiRoutes);
+app.use('/api', apiRoutes);
 
 app.use(errorHandler);
 

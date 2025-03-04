@@ -15,24 +15,20 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  color: white;
-}
-
 .ant-checkbox {
   align-self: unset;
 }
 
 .ant-layout-header {
-  color: white;
-  background-color: oklch(0.476 0.114 61.907);
+  color: black;
+  background-color: white;
 }
 
 .small-input {
   max-width: 6rem;
 }
 
-.form-top {
+.page-top {
   background-image: url('/form-top.jpg');
   background-size: cover;
 }

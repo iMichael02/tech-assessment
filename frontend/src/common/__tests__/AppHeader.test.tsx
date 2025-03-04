@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
-import AppHeader from '../AppHeader';
+import AppHeader from '../components/AppHeader';
 
 describe('AppHeader', () => {
   it('renders the header with title and navigation links', () => {

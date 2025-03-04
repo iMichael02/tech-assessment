@@ -13,6 +13,11 @@ jest.mock('antd', () => ({
     error: jest.fn(),
   },
 }));
+jest.mock('src/constants/index.ts', () => ({
+  BASE_API_URL: 'http://localhost:3000',
+  HOST: '0.0.0.0',
+}));
+
 const mockedAxios = axios as jest.Mocked<typeof axios>;
 
 const queryClient = new QueryClient();

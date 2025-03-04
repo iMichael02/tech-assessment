@@ -9,7 +9,7 @@ git clone https://github.com/iMichael02/tech-assessment.git
 cd tech-assessment
 ```
 
-# Local Development Without Docker
+# Local Development
 
 ## Front-End
 
@@ -17,6 +17,7 @@ cd tech-assessment
 
 - Node.js (v14 or higher)
 - npm (v6 or higher)
+- Docker Engine (v17 or higher)
 
 ### Installation
 

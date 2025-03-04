@@ -1,6 +1,7 @@
 services:
   db:
     image: mysql:latest
+    container_name: db
     environment:
       MYSQL_ROOT_PASSWORD: 123456
       MYSQL_DATABASE: health
@@ -14,16 +15,35 @@ services:
       interval: 1m30s
       timeout: 30s
       retries: 5
-      start_period: 30s
+      start_period: 60s
 
   backend:
+    container_name: backend
     build: ./backend
+    environment:
+      DATABASE_URL: mysql://root:123456@db:3306/mydb?schema=public
+      HOST: 0.0.0.0
+      PORT: 3000
     volumes:
       - ./backend:/app
     ports:
       - '3000:3000'
     depends_on:
-      - db
+      db:
+        condition: service_healthy
+    command: sh -c "npm run migrate:deploy && npm run seed && npm run dev"
+
+  frontend:
+    container_name: frontend
+    build: ./frontend
+    environment:
+      VITE_BASE_API_URL: http://localhost:3000/api
+    volumes:
+      - ./frontend:/app
+    ports:
+      - '5173:5173'
+    depends_on:
+      - backend
 
 volumes:
   db_data:

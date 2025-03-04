@@ -5,6 +5,11 @@ import ManageHealthDeclarationPage from '../ManageHealthDeclarationPage';
 import axios from 'axios';
 
 jest.mock('axios');
+jest.mock('src/constants/index.ts', () => ({
+  BASE_API_URL: 'http://localhost:3000',
+  HOST: '0.0.0.0',
+}));
+
 const mockedAxios = axios as jest.Mocked<typeof axios>;
 
 const createTestQueryClient = () =>
@@ -34,8 +39,8 @@ describe('ManageHealthDeclarationPage', () => {
         matches: false,
         media: query,
         onchange: null,
-        addListener: jest.fn(), // Deprecated
-        removeListener: jest.fn(), // Deprecated
+        addListener: jest.fn(),
+        removeListener: jest.fn(),
         addEventListener: jest.fn(),
         removeEventListener: jest.fn(),
         dispatchEvent: jest.fn(),
@@ -91,12 +96,30 @@ describe('ManageHealthDeclarationPage', () => {
 
     await waitFor(() => {
       expect(
-        screen.getByText(/Manage Health Declarations/i)
+        screen.getAllByText((_, element) => {
+          return element?.textContent === 'Manage Health Declaration';
+        })[0]
       ).toBeInTheDocument();
-      expect(screen.getByText(/John Doe/i)).toBeInTheDocument();
-      expect(screen.getByText(/37/i)).toBeInTheDocument();
-      expect(screen.getByText(/cough/i)).toBeInTheDocument();
-      expect(screen.getByText(/Yes/i)).toBeInTheDocument();
+      expect(
+        screen.getAllByText((_, element) => {
+          return element?.textContent === 'John Doe';
+        })[0]
+      ).toBeInTheDocument();
+      expect(
+        screen.getAllByText((_, element) => {
+          return element?.textContent === '37';
+        })[0]
+      ).toBeInTheDocument();
+      expect(
+        screen.getAllByText((_, element) => {
+          return element?.textContent === 'cough';
+        })[0]
+      ).toBeInTheDocument();
+      expect(
+        screen.getAllByText((_, element) => {
+          return element?.textContent === 'Yes';
+        })[0]
+      ).toBeInTheDocument();
     });
   });
 
