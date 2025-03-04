@@ -3,6 +3,7 @@ import {
   HealthDeclarationRepository,
 } from '@/repositories/healthDeclaration.repository';
 import { CreateHealthData } from '@/types';
+import { processHDList } from '@/utils/processHDList';
 
 export class HealthDeclarationService {
   constructor(private readonly repo: HealthDeclarationRepository) {}
@@ -22,17 +23,7 @@ export class HealthDeclarationService {
       throw Error('Get health declaration list failed');
     }
 
-    const processedResult = result.map((item) => {
-      const { Symptoms, ...copy } = item;
-      const [firstSymptom, ...rest] = Symptoms;
-      return {
-        ...copy,
-        symptoms: rest.reduce(
-          (acc, cur) => acc + ', ' + cur.name,
-          firstSymptom.name
-        ),
-      };
-    });
+    const processedResult = processHDList(result);
 
     return processedResult;
   }

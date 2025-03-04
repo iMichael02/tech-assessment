@@ -1,7 +1,8 @@
-import { cwd } from '@/utils';
 import prisma from './prisma.client';
 import { readFileSync } from 'fs';
 import { CreateHealthData } from '../src/types';
+
+const cwd = process.cwd();
 
 const seed = async () => {
   await prisma.healthDeclaration.deleteMany();

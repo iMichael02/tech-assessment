@@ -4,4 +4,16 @@ type CreateHealthData = Prisma.HealthDeclarationCreateInput & {
   symptoms: string[];
 };
 
-export { CreateHealthData };
+type UnProcessedHDList = ({
+  Symptoms: {
+    name: string;
+    id: string;
+  }[];
+} & {
+  name: string;
+  id: string;
+  temperature: number;
+  contactedWithCovid19Suspects: boolean;
+})[];
+
+export { CreateHealthData, UnProcessedHDList };
