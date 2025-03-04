@@ -80,7 +80,7 @@ npm run dev
 - Create new health declaration:
 
 ```sh
-POST: http://localhost:3000/health-declaration
+POST: http://0.0.0.0:3000/health-declaration
 ```
 
 - Request body example:
@@ -97,7 +97,7 @@ POST: http://localhost:3000/health-declaration
 - Get health declaration list:
 
 ```sh
-GET: http://localhost:3000/health-declaration
+GET: http://0.0.0.0:3000/health-declaration
 ```
 
 ### Building for Production
