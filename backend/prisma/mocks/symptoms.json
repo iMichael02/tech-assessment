@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "name": "cough"
+  },
+  {
+    "id": "2",
+    "name": "smell impairment"
+  },
+  {
+    "id": "3",
+    "name": "fever"
+  },
+  {
+    "id": "4",
+    "name": "breathing difficulties"
+  },
+  {
+    "id": "5",
+    "name": "body aches"
+  },
+  {
+    "id": "6",
+    "name": "headaches"
+  },
+  {
+    "id": "7",
+    "name": "fatigue"
+  },
+  {
+    "id": "8",
+    "name": "sore throat"
+  },
+  {
+    "id": "9",
+    "name": "diarrhea"
+  },
+  {
+    "id": "10",
+    "name": "runny nose"
+  }
+]

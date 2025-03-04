@@ -5,7 +5,8 @@
 // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
 
 generator client {
-  provider = "prisma-client-js"
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "linux-musl-openssl-3.0.x"]
 }
 
 datasource db {
@@ -14,10 +15,10 @@ datasource db {
 }
 
 model HealthDeclaration {
-  id                   Int     @id @default(autoincrement())
-  name                 String
-  temperature          Float
-  hasContactedSuspects Boolean
+  id                           String  @id @default(uuid())
+  name                         String
+  temperature                  Float
+  contactedWithCovid19Suspects Boolean
 
   Symptoms Symptom[] @relation("SymptomHealthDeclaration")
 
@@ -25,8 +26,8 @@ model HealthDeclaration {
 }
 
 model Symptom {
-  id   Int    @id @default(autoincrement())
-  name String
+  id   String @id @default(uuid())
+  name String @unique
 
   HealthDeclaration HealthDeclaration[] @relation("SymptomHealthDeclaration")
 

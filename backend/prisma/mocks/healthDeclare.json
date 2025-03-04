@@ -1,0 +1,155 @@
+[
+  {
+    "name": "John Doe",
+    "temperature": 36.5,
+    "symptoms": ["cough", "fever"],
+    "contactedWithCovid19Suspects": false,
+    "id": "1e5c"
+  },
+  {
+    "name": "Jane Smith",
+    "temperature": 37.2,
+    "symptoms": ["fatigue", "sore throat"],
+    "contactedWithCovid19Suspects": true,
+    "id": "d9f0"
+  },
+  {
+    "name": "Alice Johnson",
+    "temperature": 36.8,
+    "symptoms": ["cough"],
+    "contactedWithCovid19Suspects": false,
+    "id": "4a3f"
+  },
+  {
+    "name": "Bob Brown",
+    "temperature": 38,
+    "symptoms": ["fever", "sore throat"],
+    "contactedWithCovid19Suspects": true,
+    "id": "b4df"
+  },
+  {
+    "name": "Charlie Davis",
+    "temperature": 37.5,
+    "symptoms": ["fatigue"],
+    "contactedWithCovid19Suspects": false,
+    "id": "630e"
+  },
+  {
+    "name": "Diana Evans",
+    "temperature": 36.9,
+    "symptoms": ["cough", "fatigue"],
+    "contactedWithCovid19Suspects": true,
+    "id": "49d5"
+  },
+  {
+    "name": "Ethan Foster",
+    "temperature": 37.1,
+    "symptoms": ["sore throat"],
+    "contactedWithCovid19Suspects": false,
+    "id": "581b"
+  },
+  {
+    "name": "Fiona Green",
+    "temperature": 36.7,
+    "symptoms": ["fever"],
+    "contactedWithCovid19Suspects": true,
+    "id": "07ac"
+  },
+  {
+    "name": "George Harris",
+    "temperature": 37.3,
+    "symptoms": ["cough", "sore throat"],
+    "contactedWithCovid19Suspects": false,
+    "id": "87e7"
+  },
+  {
+    "name": "Hannah White",
+    "temperature": 36.6,
+    "symptoms": ["fatigue", "fever"],
+    "contactedWithCovid19Suspects": true,
+    "id": "974f"
+  },
+  {
+    "name": "Ivy King",
+    "temperature": 37,
+    "symptoms": ["cough", "fatigue"],
+    "contactedWithCovid19Suspects": false,
+    "id": "ee4d"
+  },
+  {
+    "name": "Jack Lee",
+    "temperature": 36.4,
+    "symptoms": ["sore throat"],
+    "contactedWithCovid19Suspects": true,
+    "id": "7be0"
+  },
+  {
+    "name": "Karen Miller",
+    "temperature": 37.6,
+    "symptoms": ["fever", "fatigue"],
+    "contactedWithCovid19Suspects": false,
+    "id": "a586"
+  },
+  {
+    "name": "Liam Nelson",
+    "temperature": 36.3,
+    "symptoms": ["cough"],
+    "contactedWithCovid19Suspects": true,
+    "id": "40a9"
+  },
+  {
+    "name": "Mia Owens",
+    "temperature": 37.4,
+    "symptoms": ["sore throat", "fatigue"],
+    "contactedWithCovid19Suspects": false,
+    "id": "214f"
+  },
+  {
+    "id": "db7e",
+    "name": "Michael Jordan",
+    "temperature": "38",
+    "symptoms": ["cough", "breathing difficulty"],
+    "contactedWithCovid19Suspects": "no"
+  },
+  {
+    "id": "cf31",
+    "name": "Dustin Wieber",
+    "temperature": "37.5",
+    "symptoms": ["fatigue", "diarrhea"],
+    "contactedWithCovid19Suspects": "no"
+  },
+  {
+    "id": "6f84",
+    "name": "Keanu Reeves",
+    "temperature": "38",
+    "symptoms": ["fever", "bodyaches", "sore throat"],
+    "contactedWithCovid19Suspects": false
+  },
+  {
+    "id": "ccff",
+    "name": "Chris Helmsworth",
+    "temperature": "38",
+    "symptoms": ["smell impairment"],
+    "contactedWithCovid19Suspects": false
+  },
+  {
+    "id": "3e25",
+    "name": "Donald Trump",
+    "temperature": "39",
+    "symptoms": ["breathing difficulty"],
+    "contactedWithCovid19Suspects": false
+  },
+  {
+    "id": "4781",
+    "name": "Freddie Mercury",
+    "temperature": "36",
+    "symptoms": ["diarrhea", "sore throat"]
+  },
+  {
+    "id": "62c9",
+    "name": "Steve McQueen",
+    "temperature": "40",
+    "symptoms": ["fever"],
+    "contactedWithCovid19Suspects": false
+  }
+]
