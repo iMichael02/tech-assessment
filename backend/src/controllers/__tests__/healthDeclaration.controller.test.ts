@@ -1,6 +1,6 @@
 import { HealthDeclarationController } from '../healthDeclatation.controller';
 import { HealthDeclarationService } from '@/services/healthDeclaration.service';
-import { APIResponse } from '@/utils/ApiResponse';
+import { ApiResponse } from '@/utils/ApiResponse';
 import { messages } from '@/constants';
 import { StatusCodes } from 'http-status-codes';
 import { catchAsync } from '@/utils/catchAsync';
@@ -41,7 +41,7 @@ describe('HealthDeclarationController', () => {
       await controller.createHealthDeclaration(req, res, next);
 
       expect(service.createHealthDeclaration).toHaveBeenCalledWith(mockData);
-      expect(APIResponse).toHaveBeenCalledWith(
+      expect(ApiResponse).toHaveBeenCalledWith(
         StatusCodes.NO_CONTENT,
         messages.SUCCESS
       );
@@ -65,7 +65,7 @@ describe('HealthDeclarationController', () => {
       await controller.getHealthDeclarationList(req, res, next);
 
       expect(service.getHealthDeclarationList).toHaveBeenCalled();
-      expect(APIResponse).toHaveBeenCalledWith(StatusCodes.OK, [mockData]);
+      expect(ApiResponse).toHaveBeenCalledWith(StatusCodes.OK, [mockData]);
     });
 
     it('should throw an error when getHealthDeclarationList fails', async () => {

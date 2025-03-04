@@ -1,5 +1,5 @@
 import { ErrorRequestHandler, NextFunction, Request, Response } from 'express';
-import { APIResponse } from '../utils/ApiResponse';
+import { ApiResponse } from '../utils/ApiResponse';
 import { StatusCodes } from 'http-status-codes';
 import { messages } from '@/constants';
 import Joi from 'joi';
@@ -17,7 +17,7 @@ export const errorHandler: ErrorRequestHandler = async (
     const { details } = err;
     const errors = details.map((detail) => detail.message);
 
-    errorRes = new APIResponse(StatusCodes.BAD_REQUEST, errors);
+    errorRes = new ApiResponse(StatusCodes.BAD_REQUEST, errors);
   }
 
   if (!errorRes && err instanceof Prisma.PrismaClientKnownRequestError) {
@@ -28,10 +28,10 @@ export const errorHandler: ErrorRequestHandler = async (
       case 'P2005':
       case 'P2006':
       case 'P2025':
-        errorRes = new APIResponse(StatusCodes.BAD_REQUEST, err.message);
+        errorRes = new ApiResponse(StatusCodes.BAD_REQUEST, err.message);
         break;
       default:
-        errorRes = new APIResponse(
+        errorRes = new ApiResponse(
           StatusCodes.INTERNAL_SERVER_ERROR,
           messages.INTERNAL_SERVER_ERROR
         );
@@ -40,7 +40,7 @@ export const errorHandler: ErrorRequestHandler = async (
   }
 
   if (!errorRes) {
-    errorRes = new APIResponse(
+    errorRes = new ApiResponse(
       StatusCodes.INTERNAL_SERVER_ERROR,
       messages.INTERNAL_SERVER_ERROR
     );

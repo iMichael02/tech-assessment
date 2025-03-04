@@ -26,12 +26,13 @@ services:
       PORT: 3000
     volumes:
       - ./backend:/app
+      - /app/node_modules
     ports:
       - '3000:3000'
     depends_on:
       db:
         condition: service_healthy
-    command: sh -c "npm run migrate:deploy && npm run seed && npm run dev"
+    command: sh -c "npm run migrate:deploy && npm run generate && npm run seed && npm run dev"
 
   frontend:
     container_name: frontend
@@ -40,8 +41,10 @@ services:
       VITE_BASE_API_URL: http://localhost:3000/api
     volumes:
       - ./frontend:/app
+      - /app/node_modules
     ports:
       - '5173:5173'
+      - '4173:4173'
     depends_on:
       - backend
 

@@ -2,7 +2,7 @@ import {
   healthDeclarationService,
   HealthDeclarationService,
 } from '@/services/healthDeclaration.service';
-import { APIResponse } from '@/utils/ApiResponse';
+import { ApiResponse } from '@/utils/ApiResponse';
 import { catchAsync } from '@/utils/catchAsync';
 import { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
@@ -15,13 +15,13 @@ export class HealthDeclarationController {
 
     await this.service.createHealthDeclaration(data);
 
-    return new APIResponse(StatusCodes.NO_CONTENT, 'Success').send(res);
+    return new ApiResponse(StatusCodes.NO_CONTENT, 'Success').send(res);
   });
 
   getHealthDeclarationList = catchAsync(async (req: Request, res: Response) => {
     const result = await this.service.getHealthDeclarationList();
 
-    return new APIResponse(StatusCodes.OK, result).send(res);
+    return new ApiResponse(StatusCodes.OK, result).send(res);
   });
 }
 

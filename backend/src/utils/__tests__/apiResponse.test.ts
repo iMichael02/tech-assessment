@@ -1,11 +1,11 @@
-import { APIResponse } from '../ApiResponse';
+import { ApiResponse } from '../ApiResponse';
 import { StatusCodes } from 'http-status-codes';
 import { Response } from 'express';
 
-describe('APIResponse', () => {
-  it('should create an APIResponse instance', () => {
-    const response = new APIResponse(StatusCodes.OK, 'OK');
-    expect(response).toBeInstanceOf(APIResponse);
+describe('ApiResponse', () => {
+  it('should create an ApiResponse instance', () => {
+    const response = new ApiResponse(StatusCodes.OK, 'OK');
+    expect(response).toBeInstanceOf(ApiResponse);
   });
 
   it('should call send method', () => {
@@ -13,7 +13,7 @@ describe('APIResponse', () => {
       status: jest.fn().mockReturnThis(),
       json: jest.fn(),
     };
-    const response = new APIResponse(StatusCodes.OK, 'OK');
+    const response = new ApiResponse(StatusCodes.OK, 'OK');
     response.send(res as unknown as Response);
 
     expect(res.status).toHaveBeenCalledWith(StatusCodes.OK);
