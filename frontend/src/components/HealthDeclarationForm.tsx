@@ -1,5 +1,5 @@
 import { useForm, Controller } from 'react-hook-form';
-import { Checkbox, Radio, Button, Form } from 'antd';
+import { Checkbox, Radio, Button } from 'antd';
 import FormField from '../common/components/FormField';
 import CHECKBOX_ITEMS from '../constants/checkboxItems';
 import useCreateHealthDeclaration from '../hooks/useCreateHealthDeclaration';
