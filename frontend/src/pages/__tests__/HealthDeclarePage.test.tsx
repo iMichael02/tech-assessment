@@ -76,7 +76,7 @@ describe('HealthDeclarePage', () => {
         'http://localhost:3000/health-declaration',
         expect.objectContaining({
           name: 'John Doe',
-          temperature: '37',
+          temperature: 37,
           symptoms: ['cough'],
           contactedWithCovid19Suspects: true,
         })
@@ -115,7 +115,7 @@ describe('HealthDeclarePage', () => {
         'http://localhost:3000/health-declaration',
         expect.objectContaining({
           name: 'John Doe',
-          temperature: '37',
+          temperature: 37,
           symptoms: ['cough'],
           contactedWithCovid19Suspects: false,
         })
@@ -155,7 +155,7 @@ describe('HealthDeclarePage', () => {
         'http://localhost:3000/health-declaration',
         expect.objectContaining({
           name: 'John Doe',
-          temperature: '37',
+          temperature: 37,
           symptoms: ['cough'],
           contactedWithCovid19Suspects: true,
         })
