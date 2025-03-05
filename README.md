@@ -5,7 +5,7 @@
 The application is hosted on AWS. You can check it out through the link:
 
 ```sh
-https://d1nre7r4cekb4r.cloudfront.net/
+https://d1nre7r4cekb4r.cloudfront.net/declare-health
 ```
 
 # I. Description
