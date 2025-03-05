@@ -111,6 +111,8 @@ cd backend && npm install && npm run build
 npm run start
 ```
 
+> **Notice:** Use `http://localhost:4173` for production.
+
 ## Testing
 
 1. Navigate to frontend or backend according to which you desire to test:
