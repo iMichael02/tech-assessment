@@ -15,6 +15,7 @@ const useCreateHealthDeclaration = () => {
   const onSubmit = (data: any) => {
     const formattedData: DeclarationRecord = {
       ...data,
+      temperature: Number(data.temperature),
       contactedWithCovid19Suspects: data.contactedWithCovid19Suspects === 'yes',
     };
 

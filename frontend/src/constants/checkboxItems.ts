@@ -12,11 +12,11 @@ const CHECKBOX_ITEMS = [
     text: 'Fever',
   },
   {
-    value: 'breathing difficulty',
-    text: 'Breathing Difficulty',
+    value: 'breathing difficulties',
+    text: 'Breathing Difficulties',
   },
   {
-    value: 'bodyaches',
+    value: 'body aches',
     text: 'Body aches',
   },
   {

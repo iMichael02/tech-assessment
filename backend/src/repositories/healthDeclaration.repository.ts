@@ -8,7 +8,6 @@ export class HealthDeclarationRepository {
   async createHealthDeclaration(data: CreateHealthData) {
     return await this.prisma.healthDeclaration.create({
       data: {
-        id: data.id,
         name: data.name,
         temperature: data.temperature,
         contactedWithCovid19Suspects: data.contactedWithCovid19Suspects,
