@@ -1,5 +1,5 @@
 import { useForm, Controller } from 'react-hook-form';
-import { Checkbox, Radio, Button } from 'antd';
+import { Checkbox, Radio, Button, Form } from 'antd';
 import FormField from '../common/components/FormField';
 import CHECKBOX_ITEMS from '../constants/checkboxItems';
 import useCreateHealthDeclaration from '../hooks/useCreateHealthDeclaration';
@@ -59,7 +59,8 @@ const HealthDeclarationForm = () => {
       <div className='mb-4'>
         <label className='block text-gray-700 text-left font-bold'>
           Have you been in contact with anyone who is suspected to have/ has
-          been diagnosed with COVID-19 within the last 14 days?
+          been diagnosed with COVID-19 within the last 14 days?{' '}
+          <span className='text-red-500'>*</span>
         </label>
         <Controller
           name='contactedWithCovid19Suspects'

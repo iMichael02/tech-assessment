@@ -8,11 +8,7 @@ export const createHealthDeclarationSchema = Joi.object({
     .required(),
   temperature: Joi.number().positive().precision(1).required().strict(),
   symptoms: Joi.array()
-    .items(
-      Joi.string()
-        .valid(...validSymptoms)
-        .required()
-    )
+    .items(Joi.string().valid(...validSymptoms))
     .required(),
   contactedWithCovid19Suspects: Joi.boolean().required(),
 }).unknown(false);
