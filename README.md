@@ -1,5 +1,13 @@
 # Tech Assessment
 
+## Note
+
+The application is hosted on AWS. You can check it out through the link:
+
+```sh
+https://d1nre7r4cekb4r.cloudfront.net/
+```
+
 # I. Description
 
 This project is a tech assessment application designed to manage health declarations. It includes both frontend and backend components, allowing users to submit health declarations and view a list of submitted declarations. The application is containerized using Docker for easy setup and deployment.
