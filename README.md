@@ -1,6 +1,29 @@
 # Tech Assessment
 
-### Installation
+# I. Description
+
+This project is a tech assessment application designed to manage health declarations. It includes both frontend and backend components, allowing users to submit health declarations and view a list of submitted declarations. The application is containerized using Docker for easy setup and deployment.
+
+# II. Features
+
+The application provides 2 main features:
+
+- Create new health declaration
+- View health declaration list
+
+To be expanded features:
+
+- Edit health declaration
+- Delete health declaration
+
+# III. Tech Stack
+
+- Frontend: Vite React.js, TypeScript, Ant Design, TailwindCSS, React Query, Axios
+- Backend: Express.js, TypeScript, Joi, Prisma
+- Database: MySQL
+- Test: Jest
+
+# IV. Setup Guide
 
 - Clone the repository:
 
@@ -9,7 +32,7 @@ git clone https://github.com/iMichael02/tech-assessment.git
 cd tech-assessment
 ```
 
-# Local Development
+## Local Development
 
 ### Prerequisites
 
@@ -17,7 +40,7 @@ cd tech-assessment
 - npm (v6 or higher)
 - Docker Engine (v17 or higher)
 
-## Start Development
+### Start Development
 
 1. Run docker compose:
 
@@ -39,7 +62,7 @@ POST: http://0.0.0.0:3000/health-declaration
 
 ```sh
 {
-  "name": "Dimmu Borgir",
+  "name": "Lorna Shore",
   "temperature": 39,
   "symptoms": ["cough", "headaches"],
   "contactedWithCovid19Suspects": true

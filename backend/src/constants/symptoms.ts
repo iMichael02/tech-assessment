@@ -1,8 +1,3 @@
-export const messages = {
-  SUCCESS: 'Success',
-  INTERNAL_SERVER_ERROR: 'Internal Server Error',
-};
-
 export const validSymptoms = [
   'cough',
   'smell impairment',

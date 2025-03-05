@@ -1,7 +1,7 @@
 import { HealthDeclarationController } from '../healthDeclatation.controller';
 import { HealthDeclarationService } from '@/services/healthDeclaration.service';
 import { ApiResponse } from '@/utils/ApiResponse';
-import { messages } from '@/constants';
+import { messages } from '@/constants/paths';
 import { StatusCodes } from 'http-status-codes';
 import { catchAsync } from '@/utils/catchAsync';
 

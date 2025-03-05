@@ -1,7 +1,7 @@
 import { ErrorRequestHandler, NextFunction, Request, Response } from 'express';
 import { ApiResponse } from '../utils/ApiResponse';
 import { StatusCodes } from 'http-status-codes';
-import { messages } from '@/constants';
+import { messages } from '@/constants/messages';
 import Joi from 'joi';
 import { Prisma } from '@prisma/client';
 

@@ -1,4 +1,4 @@
-import { validSymptoms } from '@/constants';
+import { validSymptoms } from '@/constants/symptoms';
 import Joi from 'joi';
 
 export const createHealthDeclarationSchema = Joi.object({
